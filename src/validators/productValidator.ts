@@ -16,6 +16,5 @@ export const updateProductSchema = z.object({
   stock: z.number().int().min(0, 'Stock must be a non-negative integer').optional(),
 });
 
-// Type inference for TypeScript
 export type CreateProductInput = z.infer<typeof createProductSchema>;
 export type UpdateProductInput = z.infer<typeof updateProductSchema>;

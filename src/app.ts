@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import userRoutes from './routes/userRoutes';
 import productRoutes from './routes/productRoutes';
 import errorHandler from './middlewares/errorHandler';
+import orderRoutes from './routes/orderRoutes';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use(
 // Routes
 app.use('/users', userRoutes);
 app.use('/products', productRoutes);
+app.use('/orders', orderRoutes);
 app.get('/', (req, res) => {
   res.send('E-commerce API is running.');
 });

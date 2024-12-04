@@ -14,6 +14,5 @@ export const updateUserSchema = z.object({
   phone: z.string().min(10, 'Phone number must be at least 10 characters').optional(),
 });
 
-// Type inference for TypeScript
 export type CreateUserInput = z.infer<typeof createUserSchema>;
 export type UpdateUserInput = z.infer<typeof updateUserSchema>;
