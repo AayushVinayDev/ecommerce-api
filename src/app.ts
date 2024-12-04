@@ -31,6 +31,11 @@ app.get('/', (req, res) => {
   res.send('E-commerce API is running.');
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).send({ status: 'UP', timestamp: new Date() });
+});
+
+
 //Global error handler
 app.use(errorHandler);
 
